@@ -21,7 +21,8 @@ $result = mysqli_query($connect,$test_query);
 <td>id</td><td>Title</td><td>Year</td></tr>
 <?php
 while($row = mysqli_fetch_array($result)) {
-  echo '<tr><td>'.$row['bookId'].'</td><td>'.$row['title'].'</td><td>'.$row['year'].'</td></tr>';
+$id=$row['bookId'];
+  echo '<tr><td><a href=http://192.168.4.100/booksData.php?id='.$id.'>'.$id.'</a></td><td>'.$row['title'].'</td><td>'.$row['year'].'</td></tr>';
 }
 ?>
 </table>
