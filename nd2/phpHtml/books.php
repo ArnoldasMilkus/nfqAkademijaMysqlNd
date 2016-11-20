@@ -7,6 +7,7 @@ $dbpass = 'project';
 $dbhost = '127.0.0.1';
 $connect = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");
 mysqli_select_db($connect,$dbname) or die("Could not open the db '$dbname'");
+mysqli_query($connect,"set names utf8");
 $test_query = "select * from Books";
 $result = mysqli_query($connect,$test_query);
 
